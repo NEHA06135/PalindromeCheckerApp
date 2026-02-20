@@ -1,26 +1,45 @@
 /**
  * ============================================================
- * Use Case 1 - Application Entry & Welcome Message
+ * MAIN CLASS - UseCase1PalindromeCheckerApp
  * ============================================================
  *
- * This program displays the application name and version
- * when the program starts.
+ * UC1: Welcome Message
+ * UC2: Hardcoded Palindrome Validation
  *
- * No palindrome logic is implemented in this use case.
- *
- * @version 1.0
+ * @version 2.0
  */
 
 public class UseCase1PalindromeCheckerApp {
 
-    // Main method - Entry point of the program
     public static void main(String[] args) {
 
-        System.out.println("==============================================");
-        System.out.println(" Welcome to the Palindrome Checker App ");
-        System.out.println(" Version : 1.0 ");
-        System.out.println(" System initialized successfully.");
-        System.out.println("==============================================");
+        // =========================
+        // UC1 - Welcome Message
+        // =========================
+        System.out.println("Welcome to Palindrome Checker App");
+        System.out.println("----------------------------------");
 
+        // =========================
+        // UC2 - Hardcoded Palindrome
+        // =========================
+        String input = "madam";
+
+        boolean isPalindrome = true;
+
+        // Compare characters from both ends
+        for (int i = 0; i < input.length() / 2; i++) {
+
+            if (input.charAt(i) != input.charAt(input.length() - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        // Required Output Format
+        System.out.println("Input text: " + input);
+        System.out.println("Is it a Palindrome? : " + isPalindrome);
+
+        System.out.println("----------------------------------");
+        System.out.println("Program Completed");
     }
 }
